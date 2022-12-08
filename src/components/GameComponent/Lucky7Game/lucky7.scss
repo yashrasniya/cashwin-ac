@@ -1,0 +1,271 @@
+@import "./../../../scss/colors";
+@import "./../../../scss/mixins";
+
+.lucky7GameDiv {
+  .topSlideDiv {
+    width: 100%;
+    height: 292px;
+    .topBanner {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 24px;
+      }
+    }
+    .cards {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      background-color: rgba($color: #000, $alpha: 0.7);
+      padding: 16px;
+      margin: 24px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .card {
+        height: 86px;
+        width: 56px;
+        margin: 0 !important;
+      }
+    }
+    .countNumber {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      margin: 24px;
+      .digit {
+        color: #000;
+        background-color: #fff;
+        font-size: 44px;
+        font-weight: bold;
+        padding: 12px;
+        margin-left: 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+  .gameBtn {
+    .btn {
+      width: 100%;
+      background-color: $secondary-color;
+      box-shadow: none;
+      height: 48px;
+      border-radius: 10px;
+    }
+    .text {
+      color: #383838;
+    }
+  }
+  .lockImgDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $secondary-color, $alpha: 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .highLowCardDiv {
+    background-color: #f7f7f7;
+    margin: 32px 0;
+    padding: 24px;
+    border-radius: 12px;
+    justify-content: center;
+    .gameCard {
+      height: fit-content;
+      width: fit-content;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      padding: 12px;
+      span {
+        font-size: 32px;
+        line-height: 130%;
+      }
+      img {
+        width: 56px;
+        height: 56px;
+      }
+    }
+  }
+  .oddEvenDiv {
+    margin: 32px 0;
+    justify-content: space-between;
+    .oddEven {
+      background-color: #f7f7f7;
+      padding: 24px;
+      border-radius: 12px;
+    }
+    .cardIconBtn {
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c7c7c7;
+      }
+      .bg-info {
+        background-color: #17a2b8 !important;
+      }
+    }
+  }
+  .displayCardsDiv {
+    margin-bottom: 32px;
+    padding: 0 12px;
+    .col {
+      padding: 24px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1;
+      background-color: #f7f7f7;
+    }
+    .cardSet {
+      margin: 0 10px;
+    }
+    .eachCard {
+      height: 57px;
+      width: 41px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: inset 0 1px #f7f7f7;
+      font-size: 16px;
+      position: relative;
+      .cardImg {
+        height: 26px;
+        width: 25px;
+        object-fit: fill;
+      }
+      .lockDiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        border-radius: 5px;
+        img {
+          height: 26px;
+          width: 25px;
+          object-fit: fill;
+        }
+      }
+    }
+  }
+  .lastResultDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    .header {
+      padding: 32px;
+      background-color: $secondary-color;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+    .content {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d6d6d6;
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      span {
+        background-color: #0dc91c;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        color: #fff;
+        margin-right: 10px;
+        padding: 0 0 2px 2px;
+      }
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints,"lg")) {
+  .lastResultDiv {
+    margin: 32px auto;
+  }
+}
+@media screen and (max-width: map-get($breakpoints,"md")) {
+  .gameCard {
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 12px;
+    span {
+      font-size: 32px !important;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints,"sm")) {
+  .highLowBtn {
+    .gameBtn {
+      flex: 2;
+    }
+    .highLowCard {
+      flex: 1;
+      .gameCard {
+        .cardImg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .lastResultDiv {
+    .content {
+      justify-content: center !important;
+      padding: 8px !important;
+      span {
+        margin-right: 5px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .highLowBtn {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  .oddEvenDiv {
+    flex-direction: column;
+    row-gap: 32px;
+    .oddEven {
+      margin: 0 0 !important;
+    }
+  }
+}

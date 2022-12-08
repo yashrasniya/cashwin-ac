@@ -1,0 +1,145 @@
+@import "./../../scss/colors";
+@import "./../../scss/mixins";
+.gameContainerStyle {
+  max-height: calc(100vh - 98px) !important;
+  // overflow: hidden;
+  // overflow-y: auto;
+  .contentDiv {
+    margin-left: 315px;
+    flex: 1;
+    padding-left: 44px;
+    // background-color: gray;
+  }
+}
+.gameSubheader {
+  background-color: $secondary-color;
+  color: #fff;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 98px;
+  z-index: 2;
+  .container {
+    height: 100%;
+    .linkDiv {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .links {
+        // background-color: green;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .active {
+        box-shadow: inset 0 2px rgba($color: #fff, $alpha: 0.7);
+      }
+    }
+  }
+}
+.gameSidebarShowOnMobile {
+  display: none !important;
+}
+.gameSidebarHideOnMobile {
+  display: block !important;
+}
+.sidebarHamburger {
+  display: none !important;
+  background-color: $secondary-color;
+  position: fixed;
+  left: 0;
+  top: 170px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+.gameMobileHeader {
+  flex-direction: row-reverse;
+  display: none;
+  .logo {
+    height: 44px;
+    position: absolute;
+    left: 60px;
+    img {
+      height: 100%;
+    }
+  }
+}
+@media screen and(max-width:map-get($breakpoints,'lg')) {
+  .sidebarHamburger {
+    display: flex !important;
+  }
+  .gameContainerStyle {
+    max-width: calc(100% - 64px);
+    .contentDiv {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .gameSidebarShowOnMobile {
+      display: block !important;
+      width: 100%;
+      position: fixed;
+      left: 0;
+      z-index: 999;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      height: 100%;
+      top: 0;
+    }
+    .gameSidebarHideOnMobile {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and(max-width:map-get($breakpoints,'lg')) {
+  .gameContainerStyle {
+    max-width: calc(100% - 24px);
+  }
+  .sidebarHamburger {
+    top: 0;
+    background-color: transparent;
+  }
+  .gameSubheader {
+    top: 0 !important;
+    height: auto !important;
+    flex-direction: column;
+    background-color: transparent !important;
+
+    .gameMobileHeader {
+      display: flex;
+      background-color: $primary-color;
+      width: 100%;
+      height: 52px;
+      align-items: center;
+    }
+    .container {
+      padding: 0 16px;
+      background-color: $secondary-color;
+      height: 44px;
+      min-width: 100%;
+      .linkDiv {
+        font-size: 12px;
+        column-gap: 8px;
+        .links {
+          padding: 0;
+        }
+        .active {
+          box-shadow: inset 0 -3px rgba($color: #fff, $alpha: 0.7);
+        }
+      }
+      .rules {
+        font-size: 12px;
+        text-align: right;
+      }
+    }
+  }
+  // .sidebarMainDiv {
+  //   display: none;
+  // }
+}

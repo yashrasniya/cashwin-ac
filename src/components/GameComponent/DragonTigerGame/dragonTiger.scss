@@ -1,0 +1,269 @@
+@import "./../../../scss/colors";
+@import "./../../../scss/mixins";
+
+.dragonGameDiv {
+  .cardIconBtn {
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c7c7c7 !important;
+    }
+    .bg-info {
+      background-color: #17a2b8 !important;
+    }
+  }
+  .topSlideDiv {
+    width: 100%;
+    height: 292px;
+    .topBanner {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 24px;
+      }
+    }
+    .cards {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      background-color: rgba($color: #000, $alpha: 0.7);
+      padding: 16px;
+      margin: 24px;
+      border-radius: 12px;
+      .card {
+        height: 86px;
+        width: 56px;
+        &:first-child {
+          margin-right: 14px;
+        }
+      }
+    }
+    .countNumber {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      margin: 24px;
+      .digit {
+        color: #000;
+        background-color: #fff;
+        font-size: 44px;
+        font-weight: bold;
+        padding: 12px;
+        margin-left: 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+  .dragonTieTigerDiv {
+    background-color: #f7f7f7;
+    margin: 32px 0;
+    padding: 42px;
+    border-radius: 12px;
+    justify-content: center;
+
+    .minMax {
+      font-size: 22px;
+    }
+  }
+  .gameBtn {
+    .btn {
+      width: 100%;
+      background-color: $secondary-color;
+      box-shadow: none;
+      height: 48px;
+      border-radius: 10px;
+    }
+    .text {
+      color: #383838;
+    }
+    .lockImgDiv {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba($color: $secondary-color, $alpha: 0.5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+  }
+  .oddEvenDiv {
+    margin: 32px 0;
+    justify-content: space-between;
+
+    .dragonOddEvenDiv {
+      background-color: #f7f7f7;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .oddEvenButton {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 24px;
+      height: 48px;
+      background-color: $secondary-color;
+    }
+  }
+  .displayCardsDiv {
+    margin-bottom: 32px;
+    .col {
+      padding: 12px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      // flex: 1 0;
+      background-color: #f7f7f7;
+    }
+    .cardSet {
+      margin: 0 10px;
+    }
+    .eachCard {
+      height: 57px;
+      width: 41px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: inset 0 1px #f7f7f7;
+      font-size: 16px;
+      position: relative;
+      .cardImg {
+        height: 26px;
+        width: 25px;
+        object-fit: fill;
+      }
+      .lockDiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        border-radius: 5px;
+        img {
+          height: 26px;
+          width: 25px;
+          object-fit: fill;
+        }
+      }
+    }
+  }
+  .lastResultDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    .header {
+      padding: 32px;
+      background-color: $secondary-color;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+    .content {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d6d6d6;
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      span {
+        background-color: #0dc91c;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        color: #fff;
+        margin-right: 10px;
+        padding: 0 0 2px 2px;
+      }
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints,"mdl")) {
+  .dragonTieTigerDiv {
+    padding: 24px 0 !important;
+    .topDiv {
+      padding: 0;
+      margin: 0;
+      .gameBtn {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints,"sm")) {
+  .topSlideDiv {
+    .cards {
+      padding: 12px !important;
+      .card {
+        height: 50px !important;
+        width: 35px !important;
+        &:first-child {
+          margin-right: 8px !important;
+        }
+      }
+    }
+    .countNumber {
+      .digit {
+        font-size: 24px !important;
+      }
+    }
+  }
+  .dragonGameDiv {
+    .lastResultDiv {
+      .content {
+        padding: 8px;
+        justify-content: center;
+      }
+    }
+  }
+}
+$count-height: 60px;
+$count-width: 45px;
+
+.customCounter {
+  position: absolute !important;
+  bottom: 18px;
+  right: 18px;
+  .tick-flip-panel-text-wrapper {
+    font-size: 44px;
+  }
+  .tick-flip-card,
+  .tick-flip {
+    height: $count-height !important;
+    width: $count-width !important;
+  }
+  .tick-flip-panel {
+    background-color: white !important;
+    color: #000;
+  }
+}

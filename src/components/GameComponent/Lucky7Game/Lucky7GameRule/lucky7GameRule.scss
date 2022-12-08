@@ -1,0 +1,166 @@
+.lucky7RuleDiv {
+  hr {
+    width: 80%;
+    margin: 16px auto;
+    @media screen and (max-width: 972px) {
+      width: 100%;
+    }
+  }
+  .points {
+    padding-left: 24px;
+    li {
+      padding-bottom: 12px;
+      text-align: justify;
+      &:first-child {
+        margin-top: 12px;
+      }
+    }
+  }
+  .gameCards {
+    display: flex;
+    column-gap: 5px;
+    .eachCard {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      width: 30px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      span {
+        line-height: 16px;
+        margin-bottom: 3px;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .lowHighDiv,
+  .oddEvenDiv {
+    max-width: 518px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    .lowHighCard,
+    .oddEvenCard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      align-items: flex-end;
+    }
+    .lowHighBtn {
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 5px;
+      color: #000;
+      padding: 5px;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    @media screen and (max-width: 647px) {
+      .lowHighCard,
+      .oddEvenCard {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+      }
+    }
+  }
+  .oddEvenBtn {
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+    justify-content: space-between;
+    .payoutBtn {
+      background-color: #fff;
+      padding: 5px;
+      color: #000;
+      margin-top: 12px;
+      border-radius: 5px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  .lastSecCardsDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 518px;
+    width: 100%;
+    margin: 0 auto;
+    column-gap: 15px;
+    .redBalckCard {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 95px;
+      height: 48px;
+    }
+    .redCard {
+      object-fit: cover;
+    }
+    .blackCard {
+      object-fit: none;
+    }
+    .payoutBtn {
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 5px;
+      color: #000;
+      padding: 5px;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  .lastPayout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 518px;
+    width: 100%;
+    margin: 0 auto;
+    .payoutBtn {
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 5px;
+      color: #000;
+      padding: 5px;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .gameCards {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 15px;
+    }
+  }
+}
+.modal-content {
+  border: 1px solid rgba($color: #fff, $alpha: 0.6);
+  max-height: 819px !important;
+}

@@ -1,0 +1,203 @@
+@import "./../../../scss/colors";
+.teenpatiDiv {
+  .topSlideDiv {
+    width: 100%;
+    height: 292px;
+    border-radius: 12px;
+    overflow: hidden;
+    .topBanner {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 24px;
+      }
+    }
+    .cards {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      background-color: rgba($color: #000, $alpha: 0.7);
+      padding: 16px;
+      margin: 24px;
+      border-radius: 12px;
+      .card {
+        height: 86px;
+        width: 56px;
+        &:not(:last-child) {
+          margin-right: 14px;
+        }
+      }
+    }
+    .countNumber {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      margin: 24px;
+      .digit {
+        color: #000;
+        background-color: #fff;
+        font-size: 44px;
+        font-weight: bold;
+        padding: 12px;
+        margin-left: 10px;
+        border-radius: 8px;
+      }
+    }
+  }
+  .minMaxDiv {
+    border-radius: 12px;
+    border: 1px solid #d6d6d6;
+    margin: 32px 0;
+    overflow: hidden;
+    .minMaxTable {
+      width: 100%;
+      thead {
+        background-color: $secondary-color;
+        color: #fff;
+        th {
+          padding: 32px;
+        }
+      }
+      tbody {
+        .points {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          td {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        tr {
+          &:not(:last-child) {
+            border-bottom: 1px solid #d6d6d6;
+          }
+          td {
+            padding: 14px;
+            text-align: center;
+            &:not(:last-child) {
+              border-right: 1px solid #d6d6d6;
+            }
+          }
+        }
+      }
+    }
+    .eachPlayerBtnDiv {
+      .lockImgDiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: $secondary-color, $alpha: 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      td {
+        background-color: #c7c7c7;
+      }
+    }
+  }
+  .locked {
+    position: relative;
+    background-color: rgba($color: #7c1225, $alpha: 0.5);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .pairResult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    .header {
+      width: 100%;
+      padding: 32px;
+      background-color: $secondary-color;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+    .subheader {
+      padding: 24px;
+      border-bottom: 1px solid #d6d6d6;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 300;
+      text-align: center;
+    }
+    .pairTable {
+      width: 100%;
+      tr {
+        &:not(:last-child) {
+          border-bottom: 1px solid #d6d6d6;
+        }
+        td {
+          padding: 14px;
+          font-size: 18px;
+          &:first-child {
+            border-right: 1px solid #d6d6d6;
+          }
+        }
+      }
+    }
+  }
+  .resultDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    .header {
+      border-radius: 12px 12px 0 0;
+      padding: 32px;
+      background-color: $secondary-color;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+    .content {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d6d6d6;
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      span {
+        background-color: #0dc91c;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        color: #fff;
+        margin-right: 10px;
+        padding: 0 0 2px 2px;
+      }
+    }
+  }
+}

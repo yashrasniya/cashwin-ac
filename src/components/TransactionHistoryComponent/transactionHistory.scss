@@ -1,0 +1,16 @@
+@import "./../../scss/colors";
+.transactionHistoryDiv {
+  margin-top: 32px;
+  .header {
+    height: 98px;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $secondary-color !important;
+    h1 {
+      font-size: 20px !important;
+    }
+  }
+  padding-bottom: 48px;
+}

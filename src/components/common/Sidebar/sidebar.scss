@@ -1,0 +1,157 @@
+@import "./../../../scss/colors";
+@import "./../../../scss/mixins";
+.sidebarDiv {
+  position: fixed;
+
+  max-height: calc(100vh - 98px - 32px - 40px);
+  max-width: 315px;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: $secondary-color;
+  color: #fff;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+  border-radius: 12px;
+  .topDiv {
+    .header {
+      padding: 12px 12px 0;
+    }
+    .content {
+      padding: 0 12px;
+      .exposureBalDiv {
+        display: flex;
+        padding: 0 10px;
+        width: 100%;
+        justify-content: space-between;
+        .expBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          padding: 0 12px;
+          border-radius: 12px;
+          background-color: #626874;
+          font-size: 14px;
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+      .count {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .betInputDiv {
+        input {
+          padding: 8px 12px;
+          background-color: transparent;
+          border: 1px solid #d1d1d1;
+          box-shadow: none;
+          margin-bottom: 24px;
+          &:focus {
+            border-color: #0d6efd;
+          }
+        }
+      }
+      .maxCount {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .bottomDiv {
+    .header {
+      margin-left: 12px;
+    }
+    .sideBarLinks {
+      display: flex;
+      flex-direction: column;
+      .navLink {
+        color: #fff;
+        text-decoration: none;
+        padding: 24px 12px;
+        font-size: 16px;
+        font-weight: 500;
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+      .active {
+        background-color: $primary-color;
+      }
+    }
+    .LogoutBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        font-weight: 500;
+        .logoutIcon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+.closeArrow {
+  display: none !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 16px;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+@media screen and(max-width:map-get($breakpoints,'lg')) {
+  .bottomDiv {
+    height: 100vh;
+    overflow: hidden;
+    .sideBarLinks {
+      height: 100%;
+      overflow-y: auto;
+      padding-bottom: 60px;
+    }
+  }
+  .sidebarDiv {
+    max-height: 100vh;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .closeArrow {
+    display: flex !important;
+  }
+}
+.disabled-link {
+  cursor: not-allowed;
+  background-color: initial !important;
+  &:hover {
+    background-color: grey !important;
+  }
+}
+@media screen and (max-width: map-get($breakpoints,"lg")) {
+  .hideOnMobile {
+    display: none !important;
+  }
+  .header {
+    padding: 12px 12px 0 !important;
+  }
+}

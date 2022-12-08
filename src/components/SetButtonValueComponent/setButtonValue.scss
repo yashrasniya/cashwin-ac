@@ -1,0 +1,64 @@
+@import "./../../scss/colors";
+@import "./../../scss/mixins";
+.setButtonValueDiv {
+  padding: 32px 48px !important;
+  border-radius: 12px;
+  border: 1px solid #d1d1d1;
+  position: relative;
+
+  max-width: 100%;
+  margin: 32px auto;
+  width: calc(100vw - 64px);
+  .header {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .inputRow {
+    margin: 26px 0;
+    .form-control {
+      padding: 14px 24px;
+    }
+  }
+  .valueForm {
+    padding-bottom: 48px;
+  }
+  .submitBtnDiv {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .btn {
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+      box-shadow: none;
+      background-color: #1f2839;
+      padding: 24px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints,"sm")) {
+  .setButtonValueDiv {
+    padding: 24px !important;
+    .valueForm {
+      .col-6 {
+        padding: 0;
+        &:nth-child(1) {
+          padding-right: 5px;
+        }
+        &:nth-child(2) {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+.btnValueDiv {
+  border-radius: 12px;
+  padding: 14px 24px;
+  border: 1px solid #ced4da;
+}
